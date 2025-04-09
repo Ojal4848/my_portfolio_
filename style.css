@@ -85,7 +85,7 @@ a {
 }
 
 .hero-content {
-    color: white;
+    color: black;
     max-width: 700px;
     animation: fadeIn 2s ease-out;
 }
