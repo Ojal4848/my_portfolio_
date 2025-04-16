@@ -9,11 +9,12 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fafafa;
-  background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); /* Subtle texture */
+  background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
   color: #333;
   line-height: 1.6;
 }
 
+/* Headings & Text */
 h2 {
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
@@ -79,7 +80,7 @@ p {
   align-items: center;
   justify-content: center;
   background: linear-gradient(to bottom right, #fef6e4, #e0f7fa);
-  background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Pattern overlay */
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
   padding: 60px 20px;
   text-align: center;
 }
@@ -101,47 +102,34 @@ p {
   margin: 20px auto;
 }
 
-/* Section Base Style */
+/* Section Base */
 section {
   padding: 100px 20px;
 }
 
 section:nth-child(even) {
   background-color: #f7fdfc;
-  background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+  background-image: url('https://www.transparenttextures.com/patterns/graphy.png');
 }
 
 /* About Section */
-#about .about-content {
+.about-content {
   background-color: #fff;
   border-radius: 16px;
   padding: 40px;
   max-width: 800px;
   margin: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-/* Projects Section */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding-top: 30px;
-}
-
-.project-card {
-  background: #ffffff;
+.about-content img {
+  max-width: 100%;
+  margin-top: 20px;
   border-radius: 14px;
-  padding: 25px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
-  transition: transform 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Skills Section - No bars, just listing */
+/* Skills Section - List Only (No Bars) */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -164,69 +152,21 @@ section:nth-child(even) {
 }
 
 .skills-category ul {
-  list-style-type: circle;
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .skills-category li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
-/* Education & Certification & Blog Sections */
-.education-card,
-.certification-card,
-.blog-card {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-/* Blog Grid */
-.blog-grid, .certification-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-/* Contact Section */
-.contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-}
-
-.contact-info, .contact-form {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  flex: 1 1 350px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-button {
-  padding: 12px 20px;
-  background-color: #b8e0d2;
-  color: #fff;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #96cfc0;
+.skills-category img {
+  width: 24px;
+  height: 24px;
 }
 
 /* Media Queries */
@@ -244,5 +184,6 @@ button:hover {
     flex-direction: column;
   }
 }
+
 
 
