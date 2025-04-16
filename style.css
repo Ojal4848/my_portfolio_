@@ -1,4 +1,4 @@
-/* ------------------ Base Styles ------------------ */
+/* ------------- Base Reset ------------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Cambria Math', 'Inter', sans-serif;
   background: linear-gradient(to right, #fff1f5, #e0f7fa);
   background-image: url('https://www.transparenttextures.com/patterns/symphony.png');
   background-attachment: fixed;
@@ -15,19 +15,14 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ------------------ Fonts ------------------ */
+/* ------------- Fonts ------------- */
 h1, h2, h3 {
   font-family: 'Great Vibes', cursive;
   color: #ff69b4;
   text-shadow: 1px 1px 1px rgba(255, 105, 135, 0.3);
 }
 
-/* ------------------ Navbar ------------------ */
+/* ------------- Navbar ------------- */
 nav {
   background: linear-gradient(to right, #ffc0cb, #ffdde1);
   padding: 15px 40px;
@@ -41,8 +36,8 @@ nav {
 }
 
 nav .logo {
-  font-size: 2.2rem;
   font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
   color: #ff4d6d;
 }
 
@@ -63,7 +58,7 @@ nav ul li a:hover {
   color: #222;
 }
 
-/* ------------------ Section Styling ------------------ */
+/* ------------- Section Styling ------------- */
 section {
   padding: 80px 20px;
   position: relative;
@@ -76,7 +71,7 @@ section {
   padding: 0 20px;
 }
 
-/* ------------------ Home Section ------------------ */
+/* ------------- Home Section ------------- */
 #home {
   background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
   color: #fff;
@@ -103,7 +98,7 @@ section {
   margin: 0 auto;
 }
 
-/* ------------------ About Section ------------------ */
+/* ------------- About Section ------------- */
 #about .glass-card {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
@@ -113,7 +108,7 @@ section {
   margin-top: 30px;
 }
 
-/* ------------------ Skills Section ------------------ */
+/* ------------- Skills Section ------------- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -149,7 +144,7 @@ section {
   border-bottom: 1px dashed #ccc;
 }
 
-/* ------------------ Certifications ------------------ */
+/* ------------- Certifications ------------- */
 .cert-grid {
   display: flex;
   flex-wrap: wrap;
@@ -185,18 +180,76 @@ section {
   margin-top: 10px;
 }
 
-/* ------------------ Contact ------------------ */
+/* ------------- Contact Section (Improved Alignment) ------------- */
 #contact {
   background: url('https://www.transparenttextures.com/patterns/bright-squares.png');
+  padding: 60px 20px;
 }
 
-#contact p {
-  font-size: 1.1rem;
-  margin: 10px 0;
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.contact-info, .contact-form {
+  background-color: #fff5f7;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  flex: 1 1 400px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+  color: #ff4d6d;
+  margin-bottom: 20px;
+  font-family: 'Cambria Math', serif;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
   color: #444;
 }
 
-/* ------------------ Footer ------------------ */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+button.submit-btn {
+  background-color: #ff6f91;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.submit-btn:hover {
+  background-color: #ff4d6d;
+}
+
+/* ------------- Footer ------------- */
 footer {
   text-align: center;
   padding: 25px;
@@ -206,7 +259,7 @@ footer {
   margin-top: 60px;
 }
 
-/* ------------------ Media Queries ------------------ */
+/* ------------- Responsive Design ------------- */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -214,10 +267,19 @@ footer {
     text-align: center;
   }
 
-  .home-content h1 {
+  .hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .hero-content p {
-    font-size: 1rem;
+  .skills-grid,
+  .cert-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
   }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
