@@ -12,19 +12,19 @@ body {
   background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Headings & Text */
-h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  color: #333;
-  text-align: center;
-}
-
-p {
-  font-size: 1.1rem;
-  color: #555;
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Container */
@@ -32,6 +32,7 @@ p {
   max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
+  animation: fadeInUp 1s ease-out both;
 }
 
 /* Navbar */
@@ -83,6 +84,7 @@ p {
   background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
   padding: 60px 20px;
   text-align: center;
+  animation: fadeInUp 1s ease-out both;
 }
 
 .hero-content h1 {
@@ -121,6 +123,7 @@ section:nth-child(even) {
   margin: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
+  animation: fadeInUp 1s ease-out both;
 }
 
 .about-content img {
@@ -129,26 +132,33 @@ section:nth-child(even) {
   border-radius: 14px;
 }
 
-/* Skills Section - List Only (No Bars) */
+/* Skills Section - Enhanced Layout */
 .skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
+  padding: 40px 0;
+  align-items: stretch;
 }
 
 .skills-category {
   background-color: #fff0f6;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  width: 280px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  animation: fadeInUp 1s ease-in-out both;
+  transition: transform 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: scale(1.03);
 }
 
 .skills-category h3 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #333;
+  font-size: 1.4rem;
 }
 
 .skills-category ul {
@@ -159,14 +169,71 @@ section:nth-child(even) {
 .skills-category li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1rem;
-  margin-bottom: 10px;
+  gap: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
 }
 
 .skills-category img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+}
+
+/* Project, Blog, Education & Contact Sections */
+.project-grid,
+.blog-grid,
+.certification-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding-top: 30px;
+  animation: fadeInUp 1s ease-out both;
+}
+
+.project-card,
+.blog-card,
+.certification-card,
+.education-card,
+.contact-info,
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover,
+.blog-card:hover,
+.certification-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact Form Inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 14px 22px;
+  background-color: #b8e0d2;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #96cfc0;
 }
 
 /* Media Queries */
@@ -176,12 +243,11 @@ section:nth-child(even) {
   }
 
   .skills-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .contact-grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 
