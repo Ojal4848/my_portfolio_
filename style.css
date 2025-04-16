@@ -9,6 +9,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fafafa;
+  background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); /* Subtle texture */
   color: #333;
   line-height: 1.6;
 }
@@ -78,6 +79,7 @@ p {
   align-items: center;
   justify-content: center;
   background: linear-gradient(to bottom right, #fef6e4, #e0f7fa);
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Pattern overlay */
   padding: 60px 20px;
   text-align: center;
 }
@@ -106,6 +108,7 @@ section {
 
 section:nth-child(even) {
   background-color: #f7fdfc;
+  background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
 }
 
 /* About Section */
@@ -138,7 +141,7 @@ section:nth-child(even) {
   transform: translateY(-5px);
 }
 
-/* Skills Section */
+/* Skills Section - No bars, just listing */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -219,6 +222,7 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -240,4 +244,5 @@ button:hover {
     flex-direction: column;
   }
 }
+
 
