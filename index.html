@@ -3,121 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ojal Dhuri - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Ojal Dhuri | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fcefe9;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffe6ea;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #f7caca;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #ff6f91;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ff6f91;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .home-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .home-text {
+      flex: 1 1 300px;
+    }
+
+    .home-text h2 {
+      font-size: 2em;
+      color: #ff88a0;
+    }
+
+    .home-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .home-image {
+      flex: 1 1 250px;
+      text-align: center;
+    }
+
+    .home-image img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ffccd5;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+
+    .section {
+      margin-top: 50px;
+    }
+
+    .section h3 {
+      color: #ff6f91;
+      border-bottom: 2px solid #ffd6d6;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffe6ea;
+      border-top: 2px solid #f7caca;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">OD</a>
-      <div class="menu-toggle">
-        <span></span><span></span><span></span>
+
+  <header>
+    <h1>Ojal Dhuri</h1>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Home Section -->
+    <section class="home-section">
+      <div class="home-text">
+        <h2>Welcome to My Portfolio!</h2>
+        <p>
+          I’m Ojal Dhuri, a passionate second-year BTech Electronics and Communication student at MIT WPU, Pune. 
+          I love exploring new technology, creating electronics projects, and growing my skills in embedded systems, hardware design, and software tools.
+        </p>
       </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <div class="home-image">
+        <img src="IMG_2178.jpg" alt="Ojal Dhuri">
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>Embedded Systems</li>
+        <li>Arduino & Raspberry Pi</li>
+        <li>PCB Design (KiCad, Eagle)</li>
+        <li>C / C++ / Python</li>
+        <li>Digital & Analog Circuit Design</li>
+        <li>MATLAB & Simulink</li>
+        <li>Multisim</li>
+        <li>IoT Prototyping</li>
       </ul>
-    </div>
-  </nav>
+    </section>
 
-  <section id="home" class="hero visible">
-    <div class="container home-pattern">
-      <div class="hero-content">
-        <div class="circuit-icon"></div>
-        <h1 class="fade-in">OJAL DHURI</h1>
-        <h2 class="fade-in">Electronics & Communication Engineering</h2>
-        <p class="fade-in">
-          Passionate about creating innovative solutions through electronics and programming.
-          Exploring the intersection of hardware and software to build the future.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Introduction to Embedded Systems - NPTEL</li>
+        <li>PCB Design using KiCad - Coursera</li>
+        <li>Internet of Things (IoT) Workshop - MIT WPU</li>
+        <li>Python for Everyone - edX</li>
+        <li>Electronics for Beginners - Udemy</li>
+      </ul>
+    </section>
 
-  <section id="about" class="about visible">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="about-content glass-card">
-        <p>
-          I am a second-year BTech student specializing in Electronics and Communication
-          at MIT WPU Kothrud, Pune. My passion lies in the fascinating world of electronics
-          and its applications in solving real-world problems.
-        </p>
-        <p>
-          With strong analytical skills and a problem-solving mindset, I am constantly
-          exploring new technologies and methodologies in the field of electronics and
-          communication.
-        </p>
-        <p>
-          I believe in continuous learning and am always eager to take on new challenges
-          that help me grow both personally and professionally.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <h3>Contact</h3>
+      <p><strong>Email:</strong> ojal.dhuri@email.com</p>
+      <p><strong>Phone:</strong> +91-9876543210</p>
+      <p><strong>Location:</strong> Pune, Maharashtra, India</p>
+    </section>
 
-  <section id="skills" class="skills visible">
-    <div class="container">
-      <h2>Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skills-category glass-card">
-          <h3>Hardware</h3>
-          <ul class="skills-list">
-            <li>Circuit Design</li>
-            <li>PCB Layout</li>
-            <li>Arduino</li>
-            <li>Embedded Systems</li>
-          </ul>
-        </div>
-        <div class="skills-category glass-card">
-          <h3>Programming</h3>
-          <ul class="skills-list">
-            <li>C Programming</li>
-            <li>Python</li>
-            <li>MATLAB</li>
-            <li>C++</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- You can keep your remaining sections as is (Projects, Education, Blog, etc.) -->
+  <footer>
+    &copy; 2025 Ojal Dhuri. All rights reserved.
+  </footer>
 
-  <script>
-    // Mobile menu toggle
-    document.querySelector('.menu-toggle').addEventListener('click', function () {
-      this.classList.toggle('active');
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Fade-in animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(section => observer.observe(section));
-  </script>
 </body>
 </html>
+
